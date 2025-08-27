@@ -9,7 +9,7 @@ See the blog for more detail: [https://opentyphoon.ai/blog/th/typhoon-asr-real-t
 ## Quick Start with Google Colab
 For a hands-on demonstration without any local setup, you can run this project directly in Google Colab. The notebook provides a complete environment to transcribe audio files and experiment with the model.
 
-![[alt text](https://colab.research.google.com/assets/colab-badge.svg)(https://colab.research.google.com/drive/1t4tlRTJToYRolTmiN5ZWDR67ymdRnpAz?usp=sharing)]
+[![alt text](https://colab.research.google.com/assets/colab-badge.svg)(https://colab.research.google.com/drive/1t4tlRTJToYRolTmiN5ZWDR67ymdRnpAz?usp=sharing)]
 
 ## Features
 
