@@ -40,6 +40,30 @@ For a hands-on demonstration without any local setup, you can run this project d
 
 ## Usage
 
+### Option 1: Using the typhoon-asr Package
+
+Install and use the packaged version:
+
+```bash
+# Install the package
+pip install typhoon-asr
+
+# Command line usage
+typhoon-asr path/to/your_audio.wav
+typhoon-asr path/to/your_audio.wav --with-timestamps --device cuda
+
+# Python API usage
+from typhoon_asr import transcribe
+
+result = transcribe("path/to/your_audio.wav")
+print(result['text'])
+
+# With timestamps
+result = transcribe("path/to/your_audio.wav", with_timestamps=True)
+```
+
+### Option 2: Using the Direct Script
+
 Use the `typhoon_asr_inference.py` script to transcribe an audio file. The script will automatically handle audio resampling and processing.
 
 **Basic Transcription (CPU):**
