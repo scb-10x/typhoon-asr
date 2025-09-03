@@ -5,13 +5,14 @@ from typhoon_asr import transcribe
 def main():
     parser = argparse.ArgumentParser(description="Typhoon ASR Real-Time Inference")
     parser.add_argument("input_file", help="Input audio file path")
+    parser.add_argument('--model_name', type=str, default='scb10x/typhoon-asr-realtime', help='ASR model name')
     parser.add_argument("--with-timestamps", action="store_true", help="Generate estimated word timestamps")
     parser.add_argument("--device", choices=['auto', 'cpu', 'cuda'], default='auto', help="Processing device (default: auto)")
 
     args = parser.parse_args()
 
     try:
-        result = transcribe(args.input_file, args.with_timestamps, args.device)
+        result = transcribe(args.input_file, model_name=args.model_name, with_timestamps=args.with_timestamps, device=args.device)
 
         rtf = result['processing_time'] / result['audio_duration'] if result['audio_duration'] > 0 else 0
         

@@ -7,7 +7,7 @@ import torch
 import librosa
 import soundfile as sf
 
-def transcribe(input_file, with_timestamps=False, device='auto'):
+def transcribe(input_file, model_name: str = "scb10x/typhoon-asr-realtime", with_timestamps=False, device='auto'):
     """
     Transcribes a Thai audio file using the Typhoon ASR model.
 
@@ -47,20 +47,20 @@ def transcribe(input_file, with_timestamps=False, device='auto'):
         return processed_path, duration
 
     # --- Helper function: Load model ---
-    def load_typhoon_model(device):
+    def load_typhoon_model(model_name: str, device):
         if device == 'auto':
             device = 'cuda' if torch.cuda.is_available() else 'cpu'
         
         print(f"🌪️ Loading Typhoon ASR model on {device.upper()}...")
         model = nemo_asr.models.ASRModel.from_pretrained(
-            model_name="scb10x/stt-fastconformer-th-large-v1.5",
+            model_name=model_name,
             map_location=device
         )
         if model is None:
             raise RuntimeError("Failed to load the ASR model.")
         return model
 
-    model = load_typhoon_model(device)
+    model = load_typhoon_model(model_name, device)
     processed_file, audio_duration = prepare_audio(input_file)
     
     start_time = time.time()
