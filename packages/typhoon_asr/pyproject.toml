@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "typhoon-asr"
+version = "0.1.0"
+authors = [
+  { name="Warit Sirichotedumrong", email="warit@scb10x.com" },
+]
+description = "A user-friendly package for Thai speech recognition using the Typhoon ASR model."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "nemo-toolkit[asr]>=1.21.0",
+    "torch",
+    "librosa",
+    "soundfile",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/scb10x/typhoon-asr"
+"Bug Tracker" = "https://github.com/scb10x/typhoon-asr/issues"
+
+[project.scripts]
+typhoon-asr = "typhoon_asr.cli:main"
