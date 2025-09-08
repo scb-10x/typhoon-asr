@@ -4,7 +4,7 @@ Typhoon ASR Real-Time is a next-generation, open-source Automatic Speech Recogni
 
 This repository provides a simple command-line script to demonstrate the performance and features of the Typhoon ASR Real-Time model.
 
-See the blog for more detail: [https://opentyphoon.ai/blog/th/typhoon-asr-realtime-release]()
+See the blog for more detail: [https://opentyphoon.ai/blog/th/typhoon-asr-realtime-release](https://opentyphoon.ai/blog/en/typhoon-asr-realtime-release)
 
 ## Quick Start with Google Colab
 For a hands-on demonstration without any local setup, you can run this project directly in Google Colab. The notebook provides a complete environment to transcribe audio files and experiment with the model.
