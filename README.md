@@ -29,7 +29,7 @@ For a hands-on demonstration without any local setup, you can run this project d
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/scb10x/typhoon-asr.git
+    git clone git@github.com:scb-10x/typhoon-asr.git
     cd typhoon-asr
     ```
 
